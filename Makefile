@@ -6,7 +6,7 @@
 #    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/10/24 15:27:24 by malaakso         ###   ########.fr        #
+#    Updated: 2022/10/24 15:33:21 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJS = $(SRCS:srcs/%.c=%.o)
 all: $(NAME)
 
 $(NAME): create_objects
-	ar rucs $(NAME) $(OBJS)
+	ar ruvcs $(NAME) $(OBJS)
 
 create_objects:
 	$(CC) $(CFLGS) -c $(SRCS) -Iincludes
