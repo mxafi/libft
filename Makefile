@@ -6,7 +6,7 @@
 #    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/10/24 16:40:52 by malaakso         ###   ########.fr        #
+#    Updated: 2022/10/24 16:45:42 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = libft.a
 CC = gcc
 CFLGS = -Wall -Wextra -Werror
 SRCS = ft_isalpha.c \
-	   ft_isdigit.c
+	   ft_isdigit.c \
+	   ft_isalnum.c
 OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
