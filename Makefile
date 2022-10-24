@@ -6,14 +6,14 @@
 #    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/10/24 15:44:19 by malaakso         ###   ########.fr        #
+#    Updated: 2022/10/24 15:48:59 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
 CFLGS = -Wall -Wextra -Werror
-SRCS = ft_*.c #ILLEGAL STUFF AGAINST THE NORM, REMEMBER TO SPECIFY EACH SOURCE FILE
+SRCS = ft_isalpha.c #REMEMBER TO SPECIFY EACH SOURCE FILE
 OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
