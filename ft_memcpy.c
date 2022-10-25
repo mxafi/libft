@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 15:05:44 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/25 15:53:43 by malaakso         ###   ########.fr       */
+/*   Created: 2022/10/25 15:53:55 by malaakso          #+#    #+#             */
+/*   Updated: 2022/10/25 17:23:20 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_strlen(const char *s);
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-
-#endif
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	while (n > 0)
+	{
+		dst[n - 1] = src[n - 1];
+		n--;
+	}
+	return (dst);
+}
