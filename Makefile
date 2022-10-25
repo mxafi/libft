@@ -6,7 +6,7 @@
 #    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/10/24 16:45:42 by malaakso         ###   ########.fr        #
+#    Updated: 2022/10/25 14:36:45 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ CC = gcc
 CFLGS = -Wall -Wextra -Werror
 SRCS = ft_isalpha.c \
 	   ft_isdigit.c \
-	   ft_isalnum.c
+	   ft_isalnum.c \
+	   ft_isascii.c
 OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
