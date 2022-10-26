@@ -6,7 +6,7 @@
 #    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/10/25 14:52:04 by malaakso         ###   ########.fr        #
+#    Updated: 2022/10/26 16:50:41 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,21 +41,21 @@ SRCS = ft_isalpha.c \
 	   ft_strtrim.c \
 	   ft_split.c \
 	   ft_itoa.c \
-	   ft_strmapi \
-	   ft_striteri \
-	   ft_putchar_fd \
-	   ft_putstr_fd \
-	   ft_putendl_fd \
-	   ft_putnbr_fd
+	   ft_strmapi.c \
+	   ft_striteri.c \
+	   ft_putchar_fd.c \
+	   ft_putstr_fd.c \
+	   ft_putendl_fd.c \
+	   ft_putnbr_fd.c
 
 OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
 
-$(NAME): create_objects
+$(NAME): $(OBJS)
 	ar ruvcs $(NAME) $(OBJS)
 
-create_objects:
+$(OBJS):
 	$(CC) $(CFLGS) -c $(SRCS) -I
 
 .PHONY: clean
