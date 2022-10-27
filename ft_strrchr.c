@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 16:46:28 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/27 16:04:09 by malaakso         ###   ########.fr       */
+/*   Created: 2022/10/27 15:37:44 by malaakso          #+#    #+#             */
+/*   Updated: 2022/10/27 16:02:02 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if ((c > 64 && c < 91) || (c > 96 && c < 123))
-		return (1);
-	else if (c > 47 && c < 58)
-		return (1);
-	return (0);
+	char    *p;
+
+	p = s;
+	while (*p)
+		p++;
+	while (p != s && *p != c)
+		p--;
+	if (*p != c && p == s)
+		return (0);
+	return (p);
 }
