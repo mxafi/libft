@@ -6,8 +6,18 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:18:41 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/27 15:18:56 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/10/27 15:37:04 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+char	*ft_strchr(const char *s, int c)
+{
+	char	*p;
 
+	p = s;
+	while (*p && *p != c)
+		p++;
+	if (c != '\0' && *p == '\0')
+		return (0);
+	return (p);
+}
