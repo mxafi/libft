@@ -6,23 +6,23 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:28:26 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/25 18:30:00 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/10/27 15:22:09 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		*ft_memcpy(void	*dst, const void *src, size_t n);
+void	*ft_memcpy(void	*dst, const void *src, size_t n);
 
 static void	*ft_memcpyr(void *dst, const void *src, size_t n)
 {
-        while (n > 0)
-        {
-                dst[n - 1] = src[n - 1];
-                n--;
-        }
-        return (dst);
+	while (n > 0)
+	{
+		dst[n - 1] = src[n - 1];
+		n--;
+	}
+	return (dst);
 }
 
-void		*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	if (dst < src)
 	{
