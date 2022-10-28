@@ -6,9 +6,11 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:29:37 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/26 18:26:14 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/10/28 15:34:57 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

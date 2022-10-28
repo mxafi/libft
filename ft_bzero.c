@@ -6,9 +6,11 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:42:19 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/25 15:47:06 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/10/28 15:31:35 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

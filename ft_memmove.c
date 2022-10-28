@@ -6,17 +6,17 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:28:26 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/27 15:22:09 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/10/28 16:35:25 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void	*dst, const void *src, size_t n);
+#include "libft.h"
 
 static void	*ft_memcpyr(void *dst, const void *src, size_t n)
 {
 	while (n > 0)
 	{
-		dst[n - 1] = src[n - 1];
+		((char *)dst)[n - 1] = ((char *)src)[n - 1];
 		n--;
 	}
 	return (dst);

@@ -6,15 +6,15 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:37:44 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/27 16:02:02 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:17:48 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char    *p;
+	char	*p;
 
-	p = s;
+	p = (char *)s;
 	while (*p)
 		p++;
 	while (p != s && *p != c)
