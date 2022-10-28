@@ -6,13 +6,15 @@
 #    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/10/28 15:29:00 by malaakso         ###   ########.fr        #
+#    Updated: 2022/10/28 17:50:10 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
 CFLGS = -Wall -Wextra -Werror
+COMPILE = $(CC) $(CFLGS) -c
+AR = ar rucs $(NAME) $(OBJS)
 SRCS = ft_isalpha.c \
 	   ft_isdigit.c \
 	   ft_isalnum.c \
@@ -53,10 +55,10 @@ OBJS = $(SRCS:%.c=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar ruvcs $(NAME) $(OBJS)
+	$(AR)
 
-$(OBJS):
-	$(CC) $(CFLGS) -c $(SRCS) -I
+$(OBJS): $(SRCS)
+	$(COMPILE) $(SRCS)
 
 .PHONY: clean
 
