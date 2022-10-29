@@ -6,7 +6,7 @@
 #    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/10/28 17:50:10 by malaakso         ###   ########.fr        #
+#    Updated: 2022/10/28 19:52:57 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,9 +30,9 @@ SRCS = ft_isalpha.c \
 	   ft_toupper.c \
 	   ft_tolower.c \
 	   ft_strchr.c \
-	   ft_strrchr.c
-	   #ft_strncmp.c \
-	   ft_memchr.c \
+	   ft_strrchr.c \
+	   ft_strncmp.c \
+	   #ft_memchr.c \
 	   ft_memcmp.c \
 	   ft_strnstr.c \
 	   ft_atoi.c \

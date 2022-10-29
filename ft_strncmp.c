@@ -6,18 +6,18 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:55:47 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/27 17:13:39 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/10/28 20:09:26 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while ((s1[i] && s2[i]) && i < n)
-	{
-		//comparison stuffs
-	}
+	while (s1[i] && i < n && s1[i] == s2[i])
+		i++;
 	return (s1[i] - s2[i]);
 }
