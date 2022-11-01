@@ -6,12 +6,12 @@
 #    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/11/01 15:39:36 by malaakso         ###   ########.fr        #
+#    Updated: 2022/11/01 16:34:33 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CC = gcc
+CC = cc
 CFLGS = -Wall -Wextra -Werror
 COMPILE = $(CC) $(CFLGS) -c
 AR = ar rucs $(NAME) $(OBJS)
