@@ -6,7 +6,7 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:05:44 by malaakso          #+#    #+#             */
-/*   Updated: 2022/11/01 16:37:33 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/11/02 16:00:20 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+# define FT_INT_MIN (-2147483647 - 1)
+# define FT_INT_MAX 2147483647
+# define FT_LONG_MIN (-9223372036854775807 - 1)
+# define FT_LONG_MAX 9223372036854775807
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
