@@ -6,11 +6,30 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 19:44:47 by malaakso          #+#    #+#             */
-/*   Updated: 2022/11/02 16:50:45 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:09:59 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	is_whitespace(char c)
+{	
+	if ((c > 8 && c < 14) || c == 32)
+		return (1);
+	return (0);
+}
+
+static int	clamp_overflow(size_t input, size_t max_value, int sign)
+{
+	if (input > max_value)
+	{
+		if (sign == 1)
+			return ((int)max_value);
+		else if (input > max_value + 1)
+			return ((int)(max_value + 1));
+	}
+	return ((int)input * sign);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -22,7 +41,7 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	if (!*str)
 		return (0);
-	while ((*str > 8 && *str < 14) || *str == 32)
+	while (is_whitespace(*str))
 		str++;
 	if (*str == '+' || *str == '-')
 	{
@@ -38,12 +57,5 @@ int	ft_atoi(const char *str)
 		ans = ans * 10 + (*str - '0');
 		str++;
 	}
-	if (ans > long_max)
-	{
-		if (sign == 1)
-			ans = long_max;
-		else if (ans > long_max + 1)
-			ans = long_max + 1;
-	}
-	return ((int)ans * sign);
+	return (clamp_overflow(ans, long_max, sign));
 }
