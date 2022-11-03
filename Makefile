@@ -6,7 +6,7 @@
 #    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/11/02 19:12:13 by malaakso         ###   ########.fr        #
+#    Updated: 2022/11/03 17:37:26 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,8 @@ SRCS = ft_isalpha.c \
 	   ft_strdup.c \
 	   ft_substr.c \
 	   ft_strjoin.c \
-	   #ft_strtrim.c \
-	   ft_split.c \
+	   ft_strtrim.c \
+	   #ft_split.c \
 	   ft_itoa.c \
 	   ft_strmapi.c \
 	   ft_striteri.c \
