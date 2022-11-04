@@ -6,7 +6,7 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:12:26 by malaakso          #+#    #+#             */
-/*   Updated: 2022/11/04 16:04:36 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/11/04 19:14:03 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void		*p;
+	void	*p;
+	size_t	bytes;
 
-	if (count != 0 && size > (18446744073709551615U / count))
+	bytes = count * size;
+	if (bytes / count != size)
 		return (0);
 	p = malloc(count * size);
 	if (!p)
