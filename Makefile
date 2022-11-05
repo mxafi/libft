@@ -6,7 +6,7 @@
 #    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/11/04 14:47:17 by malaakso         ###   ########.fr        #
+#    Updated: 2022/11/05 17:17:36 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,8 +57,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR)
 
-$(OBJS): $(SRCS)
-	$(COMPILE) $(SRCS)
+%.o: %.c
+	$(COMPILE) $<
 
 .PHONY: clean
 
