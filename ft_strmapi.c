@@ -6,7 +6,7 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:11:11 by malaakso          #+#    #+#             */
-/*   Updated: 2022/11/07 18:36:09 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/11/08 18:18:35 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!new_s)
 		return (0);
 	new_s[i] = '\0';
+	if (!*s)
+		return (new_s);
 	i--;
 	while (i)
 	{
