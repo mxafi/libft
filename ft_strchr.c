@@ -6,7 +6,7 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:18:41 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/28 16:36:26 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/11/08 18:12:23 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@ char	*ft_strchr(const char *s, int c)
 	char	*p;
 
 	p = (char *)s;
-	while (*p && *p != c)
+	while (*p && *p != (char)c)
 		p++;
-	if (c != '\0' && *p == '\0')
+	if ((char)c != '\0' && *p == '\0')
 		return (0);
 	return (p);
 }
