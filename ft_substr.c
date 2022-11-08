@@ -6,7 +6,7 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 16:37:42 by malaakso          #+#    #+#             */
-/*   Updated: 2022/11/01 18:25:10 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/11/08 16:56:39 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	max_sub_len;
 	size_t	i;
 
+	if (!s)
+		return (0);
 	s_len = ft_strlen(s);
 	if (start > s_len)
 		start = s_len;
