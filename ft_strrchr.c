@@ -6,7 +6,7 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:37:44 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/28 17:17:48 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/11/08 18:13:30 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strrchr(const char *s, int c)
 	p = (char *)s;
 	while (*p)
 		p++;
-	while (p != s && *p != c)
+	while (p != s && *p != (char)c)
 		p--;
-	if (*p != c && p == s)
+	if (*p != (char)c && p == s)
 		return (0);
 	return (p);
 }
