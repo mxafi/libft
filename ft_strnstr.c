@@ -6,7 +6,7 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:16:29 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/29 19:16:56 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/11/08 18:58:22 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,15 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		p++;
 	}
+	return (0);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	char haystack[30] = "eepos";
+	printf("%s\n", haystack);
+	printf("%s\n", ft_strnstr(haystack, "e", 1));
 	return (0);
 }
