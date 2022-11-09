@@ -6,7 +6,7 @@
 /*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:16:29 by malaakso          #+#    #+#             */
-/*   Updated: 2022/11/08 18:58:22 by malaakso         ###   ########.fr       */
+/*   Updated: 2022/11/09 19:37:50 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	n_len = ft_strlen(needle);
 	if (!len)
 		return (0);
-	while (*p && p < len_addr)
+	while (*p && p <= len_addr)
 	{
 		p = ft_strchr(p, needle[0]);
 		if (!p)
@@ -37,15 +37,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		p++;
 	}
-	return (0);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char haystack[30] = "eepos";
-	printf("%s\n", haystack);
-	printf("%s\n", ft_strnstr(haystack, "e", 1));
 	return (0);
 }
