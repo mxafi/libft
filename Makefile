@@ -6,7 +6,7 @@
 #    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/12/15 12:50:46 by malaakso         ###   ########.fr        #
+#    Updated: 2022/12/15 13:16:49 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,9 @@ SRCS = ft_isalpha.c \
 	   ft_strrev.c \
 	   ft_printf.c \
 	   ft_printf_utils.c \
-	   ft_printf_spec_hex.c
+	   ft_printf_spec_hex.c \
+	   get_next_line.c \
+	   get_next_line_utils.c
 
 OBJS = $(SRCS:%.c=%.o)
 
