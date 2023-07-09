@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 16:55:47 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/29 11:43:55 by malaakso         ###   ########.fr       */
+/*   Created: 2022/11/08 15:24:52 by malaakso          #+#    #+#             */
+/*   Updated: 2023/07/09 12:15:31 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_basic.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
 
-	if (n == 0)
-		return (0);
+	if (!s)
+		return ;
 	i = 0;
-	while (s1[i] && (i < (n - 1)) && s1[i] == s2[i])
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
 		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
 }

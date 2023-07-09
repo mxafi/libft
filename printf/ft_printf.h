@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:02:04 by malaakso          #+#    #+#             */
-/*   Updated: 2023/03/19 15:33:14 by malaakso         ###   ########.fr       */
+/*   Created: 2022/11/22 15:48:37 by malaakso          #+#    #+#             */
+/*   Updated: 2023/07/09 12:02:56 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-	size_t	i;
+# include <stdarg.h>
 
-	if (!s)
-		return ;
-	i = 0;
-	while (s[i])
-	{
-		f((unsigned int)i, &s[i]);
-		i++;
-	}
-}
+# include "../libft.h"
+
+# include "ft_printf_utils.h"
+# include "ft_printf_spec_hex.h"
+
+int		ft_printf(const char *input, ...);
+
+#endif

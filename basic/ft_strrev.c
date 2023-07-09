@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 17:08:53 by malaakso          #+#    #+#             */
-/*   Updated: 2022/12/15 13:43:09 by malaakso         ###   ########.fr       */
+/*   Created: 2022/11/26 00:13:35 by malaakso          #+#    #+#             */
+/*   Updated: 2023/07/09 12:15:31 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Moved get_next_line	function prototype to libft.h
-// Moved ft_strndup		function prototype to libft.h
+#include "libft_basic.h"
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+char	*ft_strrev(char *s)
+{
+	size_t	s_len;
+	char	*tmp;
+	char	*orig_tmp;
 
-# include <stdlib.h>
-# include <unistd.h>
-# include "libft.h"
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
-# endif
-
-#endif
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (s_len <= 1)
+		return (s);
+	tmp = ft_strdup(s);
+	if (!tmp)
+		return (NULL);
+	orig_tmp = tmp;
+	while (s_len > 0)
+	{
+		s[s_len - 1] = *tmp;
+		tmp++;
+		s_len--;
+	}
+	free(orig_tmp);
+	return (s);
+}

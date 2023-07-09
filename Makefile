@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: malaakso <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2022/12/15 13:16:49 by malaakso         ###   ########.fr        #
+#    Updated: 2023/07/09 12:29:24 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,63 +15,68 @@ CC = cc
 CFLGS = -Wall -Wextra -Werror
 COMPILE = $(CC) $(CFLGS) -c
 AR = ar rucs $(NAME) $(OBJS)
-SRCS = ft_isalpha.c \
-	   ft_isdigit.c \
-	   ft_isalnum.c \
-	   ft_isascii.c \
-	   ft_isprint.c \
-	   ft_strlen.c \
-	   ft_memset.c \
-	   ft_bzero.c \
-	   ft_memcpy.c \
-	   ft_memmove.c \
-	   ft_strlcpy.c \
-	   ft_strlcat.c \
-	   ft_toupper.c \
-	   ft_tolower.c \
-	   ft_strchr.c \
-	   ft_strrchr.c \
-	   ft_strncmp.c \
-	   ft_memchr.c \
-	   ft_memcmp.c \
-	   ft_strnstr.c \
-	   ft_atoi.c \
-	   ft_calloc.c \
-	   ft_strdup.c \
-	   ft_substr.c \
-	   ft_strjoin.c \
-	   ft_strtrim.c \
-	   ft_split.c \
-	   ft_itoa.c \
-	   ft_strmapi.c \
-	   ft_striteri.c \
-	   ft_putchar_fd.c \
-	   ft_putstr_fd.c \
-	   ft_putendl_fd.c \
-	   ft_putnbr_fd.c \
-	   ft_strrev.c \
-	   ft_printf.c \
-	   ft_printf_utils.c \
-	   ft_printf_spec_hex.c \
-	   get_next_line.c \
-	   get_next_line_utils.c
+
+SRCS	=	basic/ft_isalpha.c \
+			basic/ft_isdigit.c \
+			basic/ft_isalnum.c \
+			basic/ft_isascii.c \
+			basic/ft_isprint.c \
+			basic/ft_strlen.c \
+			basic/ft_memset.c \
+			basic/ft_bzero.c \
+			basic/ft_memcpy.c \
+			basic/ft_memmove.c \
+			basic/ft_strlcpy.c \
+			basic/ft_strlcat.c \
+			basic/ft_toupper.c \
+			basic/ft_tolower.c \
+			basic/ft_strchr.c \
+			basic/ft_strrchr.c \
+			basic/ft_strncmp.c \
+			basic/ft_memchr.c \
+			basic/ft_memcmp.c \
+			basic/ft_strnstr.c \
+			basic/ft_atoi.c \
+			basic/ft_calloc.c \
+			basic/ft_strdup.c \
+			basic/ft_substr.c \
+			basic/ft_strjoin.c \
+			basic/ft_strtrim.c \
+			basic/ft_split.c \
+			basic/ft_itoa.c \
+			basic/ft_strmapi.c \
+			basic/ft_striteri.c \
+			basic/ft_putchar_fd.c \
+			basic/ft_putstr_fd.c \
+			basic/ft_putendl_fd.c \
+			basic/ft_putnbr_fd.c \
+			basic/ft_strrev.c \
+			basic/ft_strndup.c \
+			printf/ft_printf.c \
+			printf/ft_printf_utils.c \
+			printf/ft_printf_spec_hex.c \
+			gnl/get_next_line.c
 
 OBJS = $(SRCS:%.c=%.o)
 
+.PHONY: Makefile
+
+.PHONY: all
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR)
 
 %.o: %.c
-	$(COMPILE) $<
+	$(COMPILE) $< -o $@
 
 .PHONY: clean
-
 clean:
 	/bin/rm -f $(OBJS)
 
+.PHONY: fclean
 fclean: clean
 	/bin/rm -f $(NAME)
 
+.PHONY: re
 re: fclean all

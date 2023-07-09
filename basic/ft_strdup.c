@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 15:59:43 by malaakso          #+#    #+#             */
-/*   Updated: 2022/10/28 15:33:24 by malaakso         ###   ########.fr       */
+/*   Created: 2022/11/01 15:40:39 by malaakso          #+#    #+#             */
+/*   Updated: 2023/07/09 12:15:31 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_basic.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strdup(const char *s1)
 {
+	size_t	s1_len;
+	char	*p;
 	size_t	i;
-	size_t	len;
 
-	len = 0;
-	while (src[len] != 0)
-		len++;
-	if (dstsize == 0)
-		return (len);
+	s1_len = ft_strlen(s1);
+	p = malloc(s1_len + 1);
+	if (!p)
+		return (0);
 	i = 0;
-	while (src[i] != 0 && i < dstsize - 1)
+	while (s1[i])
 	{
-		dst[i] = src[i];
+		p[i] = s1[i];
 		i++;
 	}
-	dst[i] = 0;
-	return (len);
+	p[i] = 0;
+	return (p);
 }

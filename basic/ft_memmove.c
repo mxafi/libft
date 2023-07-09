@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 00:13:35 by malaakso          #+#    #+#             */
-/*   Updated: 2022/11/26 00:46:52 by malaakso         ###   ########.fr       */
+/*   Created: 2022/10/25 17:28:26 by malaakso          #+#    #+#             */
+/*   Updated: 2023/07/09 12:13:27 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_basic.h"
 
-char	*ft_strrev(char *s)
+static void	*ft_memcpyr(void *dst, const void *src, size_t n)
 {
-	size_t	s_len;
-	char	*tmp;
-	char	*orig_tmp;
-
-	if (!s)
-		return (NULL);
-	s_len = ft_strlen(s);
-	if (s_len <= 1)
-		return (s);
-	tmp = ft_strdup(s);
-	if (!tmp)
-		return (NULL);
-	orig_tmp = tmp;
-	while (s_len > 0)
+	while (n > 0)
 	{
-		s[s_len - 1] = *tmp;
-		tmp++;
-		s_len--;
+		((char *)dst)[n - 1] = ((char *)src)[n - 1];
+		n--;
 	}
-	free(orig_tmp);
-	return (s);
+	return (dst);
+}
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	if (dst < src)
+	{
+		ft_memcpy(dst, src, len);
+	}
+	else if (dst > src)
+	{
+		ft_memcpyr(dst, src, len);
+	}
+	return (dst);
 }

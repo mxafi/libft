@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malaakso <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:24:52 by malaakso          #+#    #+#             */
-/*   Updated: 2022/11/08 15:29:00 by malaakso         ###   ########.fr       */
+/*   Created: 2022/11/11 17:08:53 by malaakso          #+#    #+#             */
+/*   Updated: 2023/07/09 12:03:18 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
-{
-	size_t	i;
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-	if (!s)
-		return ;
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
-}
+# include "../libft.h"
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
+
+char	*get_next_line(int fd);
+
+#endif

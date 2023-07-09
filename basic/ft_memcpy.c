@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 17:08:44 by malaakso          #+#    #+#             */
-/*   Updated: 2022/12/15 13:26:29 by malaakso         ###   ########.fr       */
+/*   Created: 2022/10/25 15:53:55 by malaakso          #+#    #+#             */
+/*   Updated: 2023/07/09 12:13:17 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft_basic.h"
 
-char	*ft_strndup(const char *s1, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char	*p;
 	size_t	i;
 
-	p = ft_calloc(n + 1, 1);
-	if (!p)
-		return (0);
-	p[n] = '\0';
+	if (!dst && !src)
+		n = 0;
 	i = 0;
-	while (s1[i] && i < n)
+	while (i < n)
 	{
-		p[i] = s1[i];
+		((char *)dst)[i] = ((char *)src)[i];
 		i++;
 	}
-	return (p);
+	return (dst);
 }
