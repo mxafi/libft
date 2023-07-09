@@ -6,13 +6,13 @@
 #    By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2023/07/09 12:29:24 by malaakso         ###   ########.fr        #
+#    Updated: 2023/07/09 13:19:13 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = cc
-CFLGS = -Wall -Wextra -Werror
+CFLGS = -Wall -Wextra -Werror -Wpedantic -Wunreachable-code -Wtype-limits
 COMPILE = $(CC) $(CFLGS) -c
 AR = ar rucs $(NAME) $(OBJS)
 
