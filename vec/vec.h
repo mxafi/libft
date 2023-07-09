@@ -6,7 +6,7 @@
 /*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 13:00:36 by malaakso          #+#    #+#             */
-/*   Updated: 2023/07/09 13:14:13 by malaakso         ###   ########.fr       */
+/*   Updated: 2023/07/09 14:00:59 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_vec
 	size_t			len;
 }					t_vec;
 
-int	vec_new(t_vec *dst, size_t init_len, size_t elem_size);
+void	vec_free(t_vec *src);
+int		vec_new(t_vec *dst, size_t init_len, size_t elem_size);
 
 #endif
