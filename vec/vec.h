@@ -6,7 +6,7 @@
 /*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 13:00:36 by malaakso          #+#    #+#             */
-/*   Updated: 2023/07/12 17:02:29 by malaakso         ###   ########.fr       */
+/*   Updated: 2023/07/13 08:00:50 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ void	vec_free(t_vec *src);
 int		vec_new(t_vec *dst, size_t init_len, size_t elem_size);
 int		vec_from(t_vec *dst, void *src, size_t len, size_t elem_size);
 int		vec_copy(t_vec *dst, t_vec *src);
+int		vec_resize(t_vec *src, size_t target_size);
 
 #endif
