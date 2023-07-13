@@ -6,7 +6,7 @@
 /*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 06:55:11 by malaakso          #+#    #+#             */
-/*   Updated: 2023/07/13 07:56:48 by malaakso         ###   ########.fr       */
+/*   Updated: 2023/07/13 15:19:49 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	vec_resize(t_vec *src, size_t target_size)
 
 	if (!src)
 		return (-1);
+	if (src->alloc_size == target_size)
+		return (1);
 	tmp.alloc_size = target_size;
 	tmp.elem_size = src->elem_size;
 	tmp.len = src->len;
