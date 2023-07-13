@@ -6,7 +6,7 @@
 /*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 06:55:11 by malaakso          #+#    #+#             */
-/*   Updated: 2023/07/13 15:19:49 by malaakso         ###   ########.fr       */
+/*   Updated: 2023/07/13 16:44:59 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	vec_resize(t_vec *src, size_t target_size)
 	tmp.alloc_size = target_size;
 	tmp.elem_size = src->elem_size;
 	tmp.len = src->len;
-	tmp.memory = malloc(sizeof(unsigned char) * target_size);
+	tmp.memory = malloc(target_size);
 	if (!tmp.memory || vec_copy(&tmp, src) <= 0)
 	{
 		vec_free(&tmp);
