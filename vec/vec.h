@@ -6,7 +6,7 @@
 /*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 13:00:36 by malaakso          #+#    #+#             */
-/*   Updated: 2023/07/14 15:56:58 by malaakso         ###   ########.fr       */
+/*   Updated: 2023/07/15 16:03:20 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int		vec_push(t_vec *dst, void *src);
 int		vec_pop(void *dst, t_vec *src);
 void	*vec_get(t_vec *src, size_t index);
 int		vec_insert(t_vec *dst, void *src, size_t index);
+int		vec_remove(t_vec *src, size_t index);
 
 #endif
