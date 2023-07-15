@@ -6,11 +6,12 @@
 /*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 14:45:52 by malaakso          #+#    #+#             */
-/*   Updated: 2023/07/12 16:24:41 by malaakso         ###   ########.fr       */
+/*   Updated: 2023/07/14 17:15:50 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vec.h"
+#include "../libft.h"
 
 /**
  * @brief Copies data from memory to a new vector.
