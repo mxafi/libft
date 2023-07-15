@@ -6,7 +6,7 @@
 /*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 15:57:13 by malaakso          #+#    #+#             */
-/*   Updated: 2023/07/14 16:44:34 by malaakso         ###   ########.fr       */
+/*   Updated: 2023/07/15 16:01:00 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ int	vec_insert(t_vec *dst, void *src, size_t index)
 		&dst->memory[dst->elem_size * index],
 		dst->elem_size * (dst->len - index));
 	ft_memmove(&dst->memory[dst->elem_size * index], src, dst->elem_size);
+	dst->len++;
 	return (1);
 }
