@@ -6,7 +6,7 @@
 /*   By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 14:45:52 by malaakso          #+#    #+#             */
-/*   Updated: 2023/07/14 17:15:50 by malaakso         ###   ########.fr       */
+/*   Updated: 2023/07/15 15:42:42 by malaakso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,11 @@
  */
 int	vec_from(t_vec *dst, void *src, size_t len, size_t elem_size)
 {
-	size_t	i;
-	size_t	j;
-
-	if (vec_new(dst, len, elem_size) < 0 && !src)
+	if (!dst || !src || elem_size == 0)
 		return (-1);
-	i = 0;
-	while (i < len)
-	{
-		j = 0;
-		while (j < elem_size)
-		{
-			dst->memory[(i * elem_size) + j]
-				= ((unsigned char *)src)[(i * elem_size) + j];
-			j++;
-		}
-		i++;
-	}
+	if (vec_new(dst, len, elem_size) < 0)
+		return (-1);
+	ft_memmove(dst->memory, src, dst->alloc_size);
+	dst->len = len;
 	return (1);
 }
