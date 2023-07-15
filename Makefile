@@ -6,7 +6,7 @@
 #    By: malaakso <malaakso@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:04:36 by malaakso          #+#    #+#              #
-#    Updated: 2023/07/09 13:19:13 by malaakso         ###   ########.fr        #
+#    Updated: 2023/07/15 17:12:26 by malaakso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,17 @@ SRCS	=	basic/ft_isalpha.c \
 			printf/ft_printf.c \
 			printf/ft_printf_utils.c \
 			printf/ft_printf_spec_hex.c \
-			gnl/get_next_line.c
+			gnl/get_next_line.c \
+			vec/vec_copy.c \
+			vec/vec_free.c \
+			vec/vec_from.c \
+			vec/vec_get.c \
+			vec/vec_insert.c \
+			vec/vec_new.c \
+			vec/vec_pop.c \
+			vec/vec_push.c \
+			vec/vec_remove.c \
+			vec/vec_resize.c
 
 OBJS = $(SRCS:%.c=%.o)
 

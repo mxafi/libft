@@ -3,3 +3,4 @@ libft.a
 *.o
 *.dSYM
 *.out
+.vscode
